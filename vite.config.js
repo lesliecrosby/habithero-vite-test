@@ -1,4 +1,4 @@
-// import legacy from '@vitejs/plugin-legacy'
+import legacy from '@vitejs/plugin-legacy'
 
 export default {
   build: {
@@ -11,10 +11,10 @@ export default {
       }
     }
   },
-  // plugins: [
-  //   legacy({
-  //     targets: ['ie >= 11'],
-  //     additionalLegacyPolyfills: ['regenerator-runtime/runtime']
-  //   })
-  // ]
+  plugins: [
+    legacy({
+      targets: ['ie >= 11'],
+      additionalLegacyPolyfills: ['regenerator-runtime/runtime']
+    })
+  ]
 }
