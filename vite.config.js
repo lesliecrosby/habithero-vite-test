@@ -5,8 +5,8 @@ export default {
     target: 'es2015',
     rollupOptions: {
       output: {
-        assetFileNames: 'assets/[name][extname]',
-        chunkFileNames: 'assets/[name][extname]',
+        assetFileNames: 'assets/[name].[ext]',
+        chunkFileNames: 'assets/[name].js',
         entryFileNames: 'assets/[name].js'
       }
     }
