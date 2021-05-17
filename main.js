@@ -5,7 +5,7 @@ const isStaging = window.location.host.match(/webflow.io/)
 const getScript = (url) => new Promise((resolve, reject) => {
   const script = document.createElement('script')
   script.src = url
-  script.type = module
+  script.type = 'module'
   script.crossOrigin = anonymous
   script.async = true
   script.onerror = reject
