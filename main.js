@@ -24,8 +24,9 @@ if (isStaging && !window.__DK__) {
       console.log('🙊 DK LITE Started')
       window.__DK__ = true
     })
-    .catch(() => {
+    .catch((e) => {
       console.error('Could not load script')
+      console.log(e)
       App()
     })
 } else {
