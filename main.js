@@ -5,7 +5,8 @@ const isStaging = window.location.host.match(/webflow.io/)
 const getScript = (url) => new Promise((resolve, reject) => {
   const script = document.createElement('script')
   script.src = url
-  // script.type = module
+  script.type = module
+  script.crossOrigin = anonymous
   script.async = true
   script.onerror = reject
   script.onload = script.onreadystatechange = function() {
@@ -18,7 +19,7 @@ const getScript = (url) => new Promise((resolve, reject) => {
 })
 
 if (isStaging && !window.__DK__) {
-  getScript('http://localhost:3000/main.js')
+  getScript('http://localhost:3000/app.js')
     .then(() => {
       console.log('🙊 DK LITE Started')
       window.__DK__ = true
@@ -31,4 +32,4 @@ if (isStaging && !window.__DK__) {
   App()
 }
 
-export default null
+// export default null

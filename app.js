@@ -2,9 +2,11 @@
 import Tabs from './tabs'
 
 const App = () => {
-  Tabs()
+  // Tabs()
   console.log('ok we have tabs')
 }
+console.log('is this better')
+Tabs()
 
 export default App
 
