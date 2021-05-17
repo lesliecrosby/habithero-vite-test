@@ -19,7 +19,7 @@ const getScript = (url) => new Promise((resolve, reject) => {
 })
 
 if (isStaging && !window.__DK__) {
-  getScript('http://localhost:3000/app.js')
+  getScript('http://localhost:3000/main.js')
     .then(() => {
       console.log('🙊 DK LITE Started')
       window.__DK__ = true
